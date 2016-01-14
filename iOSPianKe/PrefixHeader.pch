@@ -1,0 +1,66 @@
+//
+//  PrefixHeader.pch
+//  HaveFace
+//
+//  Created by 赵金鹏 on 15/11/18.
+//  Copyright © 2015年 赵金鹏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define RandomData [NSString stringWithFormat:@"%d", arc4random_uniform(1000000)]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define LINEColor ([UIColor colorWithHexString:@"#797784"])//线条颜色
+#define VIEW_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define VIEW_WIDTH ([UIScreen mainScreen].bounds.size.width)
+
+#define IOS7 [[UIDevice currentDevice].systemVersion floatValue] >= 7.0
+#define IOS8 [[UIDevice currentDevice].systemVersion floatValue] >= 8.0
+#define IOS9 [[UIDevice currentDevice].systemVersion floatValue] >= 9.0
+#define kCurrentVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey]
+#define WS(weakSelf) __unsafe_unretained __typeof(&*self)weakSelf = self;
+
+/*
+ RGB_16(0x42a2a2a)
+ */
+#define RGB_16(rgbValue)            [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+/*
+ RGBAlpha(255, 255, 255)
+ */
+#define RGB(r, g, b)                [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+#define HAVEFACESETPAGE(number)     [[NSUserDefaults standardUserDefaults]setObject:(number) forKey:@"kHaveFacePage"];
+#define HAVEFACEGETPAGE             [[NSUserDefaults standardUserDefaults]valueForKeyPath:@"kHaveFacePage"]
+#define FINDSETPAGE(number)         [[NSUserDefaults standardUserDefaults]setObject:(number) forKey:@"kFindPage"];
+#define FINDGETPAGE                 [[NSUserDefaults standardUserDefaults]valueForKeyPath:@"kFindPage"]
+
+#define SAVEDATAINUSERDEFAULT(data,key)       [[NSUserDefaults standardUserDefaults]setObject:(data) forKey:(key)];
+#define GETDATAFROMUSERDEFAULT(key) [[NSUserDefaults standardUserDefaults]valueForKeyPath:(key)];
+/*
+ RGBAlpha(255, 255, 255, 0.5)
+ */
+#define RGBAlpha(r, g, b, a)        [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:(a)]
+
+#define ISLANDING @"ISLANGDING"
+#define ISLEFTMENUVIEW @"KISLEFT"   //0.337331334
+#define mas_equalTo(...)                 equalTo(MASBoxValue((__VA_ARGS__)))
+#define mas_offset(...)                  valueOffset(MASBoxValue((__VA_ARGS__)))
+#define equalTo(...)                     mas_equalTo(__VA_ARGS__)
+#define offset(...)                      mas_offset(__VA_ARGS__)
+
+
+/**  *  1 判断是否为4inch        640*1136  */
+#define TWOSCREEN ([UIScreen mainScreen].bounds.size.width == 320)
+/**  *  2 判断是否为4.7inch   375*667   750*1334  */
+#define THREESCREEN ([UIScreen mainScreen].bounds.size.width == 375)
+/**  *  3 判断是否为5.5inch   414*1104   1242*2208  */
+
+#import "UIColor+Extension.h"
+#import "NSString+Helper.h"
+#endif /* PrefixHeader_pch */
+
+
+
+
