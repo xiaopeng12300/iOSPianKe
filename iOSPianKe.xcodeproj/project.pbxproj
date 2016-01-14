@@ -97,6 +97,9 @@
 		60BB1EDB1C4739A4007D8F51 /* UINavigationItem+BackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1ED81C4739A4007D8F51 /* UINavigationItem+BackItem.m */; };
 		60BB1EDE1C473A2F007D8F51 /* UIBarButtonItem+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EDC1C473A2F007D8F51 /* UIBarButtonItem+Helper.m */; };
 		60BB1EE11C473A85007D8F51 /* AFDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EE01C473A85007D8F51 /* AFDownloadRequestOperation.m */; };
+		60BB1EE61C477585007D8F51 /* PKLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EE51C477585007D8F51 /* PKLeftMenuViewController.m */; };
+		60BB1EEB1C477672007D8F51 /* PKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */; };
+		60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,6 +309,12 @@
 		60BB1EDF1C473A85007D8F51 /* AFDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDownloadRequestOperation.h; sourceTree = "<group>"; };
 		60BB1EE01C473A85007D8F51 /* AFDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFDownloadRequestOperation.m; sourceTree = "<group>"; };
 		60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		60BB1EE41C477585007D8F51 /* PKLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftMenuViewController.h; path = "左侧菜单/PKLeftMenuViewController.h"; sourceTree = "<group>"; };
+		60BB1EE51C477585007D8F51 /* PKLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftMenuViewController.m; path = "左侧菜单/PKLeftMenuViewController.m"; sourceTree = "<group>"; };
+		60BB1EE91C477672007D8F51 /* PKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKHomeViewController.h; path = "首页/PKHomeViewController.h"; sourceTree = "<group>"; };
+		60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKHomeViewController.m; path = "首页/PKHomeViewController.m"; sourceTree = "<group>"; };
+		60BB1EED1C477CBA007D8F51 /* PKLeftHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftHeadView.h; path = "左侧菜单/view/PKLeftHeadView.h"; sourceTree = "<group>"; };
+		60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftHeadView.m; path = "左侧菜单/view/PKLeftHeadView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +368,8 @@
 				60BB1D971C473118007D8F51 /* AppDelegate.h */,
 				60BB1D981C473118007D8F51 /* AppDelegate.m */,
 				60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */,
+				60BB1EE71C4775FD007D8F51 /* 首页 */,
+				60BB1EE31C4774E6007D8F51 /* 左侧菜单 */,
 				60BB1EBD1C473685007D8F51 /* 工具类 */,
 				60BB1EB51C4733EF007D8F51 /* 基类 */,
 				60BB1DCD1C4733A9007D8F51 /* 开源库 */,
@@ -696,6 +707,34 @@
 			path = "工具类";
 			sourceTree = "<group>";
 		};
+		60BB1EE31C4774E6007D8F51 /* 左侧菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				60BB1EE41C477585007D8F51 /* PKLeftMenuViewController.h */,
+				60BB1EE51C477585007D8F51 /* PKLeftMenuViewController.m */,
+				60BB1EEC1C477C87007D8F51 /* view */,
+			);
+			name = "左侧菜单";
+			sourceTree = "<group>";
+		};
+		60BB1EE71C4775FD007D8F51 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				60BB1EE91C477672007D8F51 /* PKHomeViewController.h */,
+				60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		60BB1EEC1C477C87007D8F51 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60BB1EED1C477CBA007D8F51 /* PKLeftHeadView.h */,
+				60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -849,6 +888,7 @@
 				60BB1EAB1C4733A9007D8F51 /* SDWebImageDownloaderOperation.m in Sources */,
 				60BB1E901C4733A9007D8F51 /* MJRefreshAutoStateFooter.m in Sources */,
 				60BB1EA61C4733A9007D8F51 /* NSData+ImageContentType.m in Sources */,
+				60BB1EEB1C477672007D8F51 /* PKHomeViewController.m in Sources */,
 				60BB1EAD1C4733A9007D8F51 /* SDWebImagePrefetcher.m in Sources */,
 				60BB1EA21C4733A9007D8F51 /* RECommonFunctions.m in Sources */,
 				60BB1EE11C473A85007D8F51 /* AFDownloadRequestOperation.m in Sources */,
@@ -895,6 +935,7 @@
 				60BB1E7C1C4733A9007D8F51 /* UIImageView+AFNetworking.m in Sources */,
 				60BB1E7B1C4733A9007D8F51 /* UIButton+AFNetworking.m in Sources */,
 				60BB1E7E1C4733A9007D8F51 /* UIRefreshControl+AFNetworking.m in Sources */,
+				60BB1EE61C477585007D8F51 /* PKLeftMenuViewController.m in Sources */,
 				60BB1E7F1C4733A9007D8F51 /* UIWebView+AFNetworking.m in Sources */,
 				60BB1ECC1C473685007D8F51 /* GCDCountdownTime.m in Sources */,
 				60BB1E721C4733A9007D8F51 /* AFNetworkReachabilityManager.m in Sources */,
@@ -906,6 +947,7 @@
 				60BB1D961C473118007D8F51 /* main.m in Sources */,
 				60BB1EAC1C4733A9007D8F51 /* SDWebImageManager.m in Sources */,
 				60BB1E791C4733A9007D8F51 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */,
 				60BB1ED01C473685007D8F51 /* UIImage+Helper.m in Sources */,
 				60BB1E951C4733A9007D8F51 /* MJRefreshNormalHeader.m in Sources */,
 				60BB1E8B1C4733A9007D8F51 /* MJRefreshComponent.m in Sources */,
@@ -1144,6 +1186,7 @@
 				60BB1DC01C473118007D8F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60BB1DC11C473118007D8F51 /* Build configuration list for PBXNativeTarget "iOSPianKeTests" */ = {
 			isa = XCConfigurationList;
@@ -1152,6 +1195,7 @@
 				60BB1DC31C473118007D8F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60BB1DC41C473118007D8F51 /* Build configuration list for PBXNativeTarget "iOSPianKeUITests" */ = {
 			isa = XCConfigurationList;
@@ -1160,6 +1204,7 @@
 				60BB1DC61C473118007D8F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

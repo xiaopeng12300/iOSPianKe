@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RESideMenu.h"//抽屉第三方头文件
+#import "PKHomeViewController.h"//首页
+#import "PKLeftMenuViewController.h"//左菜单
+#import "ZJPNavigationController.h"//自定义的nav
 @interface AppDelegate ()
 
 @end
@@ -17,7 +20,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    ZJPNavigationController *navigationController = [[ZJPNavigationController alloc] initWithRootViewController:[[PKHomeViewController alloc] init]];
+    PKLeftMenuViewController *leftMenuViewController = [[PKLeftMenuViewController alloc] init];
+    
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                    leftMenuViewController:leftMenuViewController
+                                                                   rightMenuViewController:nil];
+    
+    
+    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+    sideMenuViewController.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
+    sideMenuViewController.contentViewScaleValue = 1;//缩放比列
+    sideMenuViewController.contentViewInPortraitOffsetCenterX = 115;//偏移量
+    self.window.rootViewController = sideMenuViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
