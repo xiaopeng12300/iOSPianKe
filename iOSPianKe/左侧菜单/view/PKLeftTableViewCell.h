@@ -10,4 +10,7 @@
 
 @interface PKLeftTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) UIImageView *imagepk;
+@property (strong, nonatomic) UILabel *labelpk;
+
 @end
