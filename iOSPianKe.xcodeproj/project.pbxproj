@@ -100,6 +100,8 @@
 		60BB1EE61C477585007D8F51 /* PKLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EE51C477585007D8F51 /* PKLeftMenuViewController.m */; };
 		60BB1EEB1C477672007D8F51 /* PKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */; };
 		60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */; };
+		60BB1EF21C47A0FC007D8F51 /* PKLeftTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */; };
+		60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +317,10 @@
 		60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKHomeViewController.m; path = "首页/PKHomeViewController.m"; sourceTree = "<group>"; };
 		60BB1EED1C477CBA007D8F51 /* PKLeftHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftHeadView.h; path = "左侧菜单/view/PKLeftHeadView.h"; sourceTree = "<group>"; };
 		60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftHeadView.m; path = "左侧菜单/view/PKLeftHeadView.m"; sourceTree = "<group>"; };
+		60BB1EF01C47A0FC007D8F51 /* PKLeftTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftTableView.h; path = "左侧菜单/view/PKLeftTableView.h"; sourceTree = "<group>"; };
+		60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftTableView.m; path = "左侧菜单/view/PKLeftTableView.m"; sourceTree = "<group>"; };
+		60BB1EF61C47A3C1007D8F51 /* PKLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftTableViewCell.h; path = "左侧菜单/view/PKLeftTableViewCell.h"; sourceTree = "<group>"; };
+		60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftTableViewCell.m; path = "左侧菜单/view/PKLeftTableViewCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -731,6 +737,10 @@
 			children = (
 				60BB1EED1C477CBA007D8F51 /* PKLeftHeadView.h */,
 				60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */,
+				60BB1EF01C47A0FC007D8F51 /* PKLeftTableView.h */,
+				60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */,
+				60BB1EF61C47A3C1007D8F51 /* PKLeftTableViewCell.h */,
+				60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -879,6 +889,7 @@
 				60BB1E931C4733A9007D8F51 /* MJRefreshBackStateFooter.m in Sources */,
 				60BB1E9F1C4733A9007D8F51 /* UIScrollView+MJExtension.m in Sources */,
 				60BB1E8C1C4733A9007D8F51 /* MJRefreshFooter.m in Sources */,
+				60BB1EF21C47A0FC007D8F51 /* PKLeftTableView.m in Sources */,
 				60BB1E9A1C4733A9007D8F51 /* MJDIYAutoFooter.m in Sources */,
 				60BB1E741C4733A9007D8F51 /* AFURLConnectionOperation.m in Sources */,
 				60BB1E861C4733A9007D8F51 /* NSArray+MASAdditions.m in Sources */,
@@ -886,6 +897,7 @@
 				60BB1E7A1C4733A9007D8F51 /* UIAlertView+AFNetworking.m in Sources */,
 				60BB1E731C4733A9007D8F51 /* AFSecurityPolicy.m in Sources */,
 				60BB1EAB1C4733A9007D8F51 /* SDWebImageDownloaderOperation.m in Sources */,
+				60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */,
 				60BB1E901C4733A9007D8F51 /* MJRefreshAutoStateFooter.m in Sources */,
 				60BB1EA61C4733A9007D8F51 /* NSData+ImageContentType.m in Sources */,
 				60BB1EEB1C477672007D8F51 /* PKHomeViewController.m in Sources */,

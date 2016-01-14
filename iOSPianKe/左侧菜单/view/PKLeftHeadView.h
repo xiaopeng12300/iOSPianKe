@@ -17,6 +17,7 @@
 @property (strong, nonatomic)       UIButton *messageBtn;//消息按钮
 @property (strong, nonatomic)       UIButton *writeBtn;//写评论
 @property (strong, nonatomic)       UIButton *searchBtn;//搜索按钮
+@property (strong, nonatomic)       UIImageView *backImage;//背景图片
 
 @end
 

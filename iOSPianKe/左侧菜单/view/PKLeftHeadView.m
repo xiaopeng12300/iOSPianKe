@@ -14,6 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.backImage];
         [self addSubview:self.iconImageBtn];
         [self addSubview:self.userNameBtn];
         [self addSubview:self.downBtn];
@@ -65,9 +66,19 @@
     [_searchBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.messageBtn.mas_bottom).offset(15);
         make.left.equalTo(weakSelf.mas_left).offset(25);
-        make.right.equalTo(weakSelf.mas_right).offset(-70);
+        make.right.equalTo(weakSelf.mas_right).offset(-25);
         make.height.equalTo(30);
     }];
+    [_backImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(weakSelf).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+}
+
+- (UIImageView *)backImage{
+    if (!_backImage) {
+        _backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"侧边头部背景"]];
+    }
+    return _backImage;
 }
 
 - (UIButton *)iconImageBtn{
@@ -85,6 +96,7 @@
         _userNameBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_userNameBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_userNameBtn setTitle:@"登陆｜注册" forState:(UIControlStateNormal)];
+        _userNameBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     }
     return _userNameBtn;
 }
