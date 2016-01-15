@@ -9,10 +9,13 @@
 #import "PKLeftMenuViewController.h"
 #import "PKLeftHeadView.h"//头部view
 #import "PKLeftTableView.h"//列表选项
+#import "PKLeftMusicView.h"//底部音乐播放器
 @interface PKLeftMenuViewController ()
 
 @property (strong, nonatomic)           PKLeftHeadView *leftheadView;
 @property (strong, nonatomic)           PKLeftTableView *leftTable;
+@property (strong, nonatomic)           PKLeftMusicView * leftMusic;
+
 @end
 
 @implementation PKLeftMenuViewController
@@ -35,7 +38,15 @@
         make.left.equalTo(weakSelf.view.mas_left);
         make.bottom.equalTo(weakSelf.view.mas_bottom).offset(-60);
     }];
-    // Do any additional setup after loading the view.
+    
+    [self.view addSubview:self.leftMusic];
+    [_leftMusic mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.left.mas_equalTo(weakSelf.view.mas_left);
+        make.right.mas_equalTo(weakSelf.view.mas_right).offset(-45);
+        make.bottom.mas_equalTo(weakSelf.view.mas_bottom);
+        make.height.mas_equalTo(@60);
+    }];
 }
 //侧边顶部信息view
 - (PKLeftHeadView *)leftheadView{
@@ -51,6 +62,16 @@
     }
     return _leftTable;
 }
+
+- (PKLeftMusicView*)leftMusic
+{
+    if (!_leftMusic)
+    {
+        _leftMusic = [[PKLeftMusicView alloc] init];
+    }
+    return _leftMusic;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

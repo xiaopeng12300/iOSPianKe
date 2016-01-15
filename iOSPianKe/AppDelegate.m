@@ -31,7 +31,7 @@
                                                                    rightMenuViewController:nil];
     
     
-    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+//    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
     sideMenuViewController.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
     sideMenuViewController.contentViewScaleValue = 1;//缩放比列
     sideMenuViewController.contentViewInPortraitOffsetCenterX = VIEW_WIDTH/2-45;//偏移量

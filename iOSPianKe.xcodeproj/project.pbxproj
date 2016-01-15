@@ -102,6 +102,7 @@
 		60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EEE1C477CBA007D8F51 /* PKLeftHeadView.m */; };
 		60BB1EF21C47A0FC007D8F51 /* PKLeftTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */; };
 		60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */; };
+		60BB1F041C489619007D8F51 /* PKLeftMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1F031C489619007D8F51 /* PKLeftMusicView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +322,8 @@
 		60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftTableView.m; path = "左侧菜单/view/PKLeftTableView.m"; sourceTree = "<group>"; };
 		60BB1EF61C47A3C1007D8F51 /* PKLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftTableViewCell.h; path = "左侧菜单/view/PKLeftTableViewCell.h"; sourceTree = "<group>"; };
 		60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftTableViewCell.m; path = "左侧菜单/view/PKLeftTableViewCell.m"; sourceTree = "<group>"; };
+		60BB1F021C489619007D8F51 /* PKLeftMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftMusicView.h; path = "左侧菜单/view/PKLeftMusicView.h"; sourceTree = "<group>"; };
+		60BB1F031C489619007D8F51 /* PKLeftMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftMusicView.m; path = "左侧菜单/view/PKLeftMusicView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,6 +744,8 @@
 				60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */,
 				60BB1EF61C47A3C1007D8F51 /* PKLeftTableViewCell.h */,
 				60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */,
+				60BB1F021C489619007D8F51 /* PKLeftMusicView.h */,
+				60BB1F031C489619007D8F51 /* PKLeftMusicView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -950,6 +955,7 @@
 				60BB1EE61C477585007D8F51 /* PKLeftMenuViewController.m in Sources */,
 				60BB1E7F1C4733A9007D8F51 /* UIWebView+AFNetworking.m in Sources */,
 				60BB1ECC1C473685007D8F51 /* GCDCountdownTime.m in Sources */,
+				60BB1F041C489619007D8F51 /* PKLeftMusicView.m in Sources */,
 				60BB1E721C4733A9007D8F51 /* AFNetworkReachabilityManager.m in Sources */,
 				60BB1E961C4733A9007D8F51 /* MJRefreshStateHeader.m in Sources */,
 				60BB1EA91C4733A9007D8F51 /* SDWebImageDecoder.m in Sources */,
