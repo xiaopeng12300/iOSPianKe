@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601E45B41C48CE9B008CBB9F /* PKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B31C48CE9B008CBB9F /* PKLandingViewController.m */; };
+		601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */; };
+		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
 		60BB1D961C473118007D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D951C473118007D8F51 /* main.m */; };
 		60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D981C473118007D8F51 /* AppDelegate.m */; };
 		60BB1D9F1C473118007D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BB1D9D1C473118007D8F51 /* Main.storyboard */; };
@@ -123,6 +126,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601E45B21C48CE9B008CBB9F /* PKLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLandingViewController.h; path = "登陆/PKLandingViewController.h"; sourceTree = "<group>"; };
+		601E45B31C48CE9B008CBB9F /* PKLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLandingViewController.m; path = "登陆/PKLandingViewController.m"; sourceTree = "<group>"; };
+		601E45B61C48D0A8008CBB9F /* PKThirdLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKThirdLandingView.h; path = "登陆/view/PKThirdLandingView.h"; sourceTree = "<group>"; };
+		601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKThirdLandingView.m; path = "登陆/view/PKThirdLandingView.m"; sourceTree = "<group>"; };
+		601E45BC1C48EE18008CBB9F /* PKEmailLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKEmailLandingView.h; path = "登陆/view/PKEmailLandingView.h"; sourceTree = "<group>"; };
+		601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKEmailLandingView.m; path = "登陆/view/PKEmailLandingView.m"; sourceTree = "<group>"; };
 		60BB1D911C473118007D8F51 /* iOSPianKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPianKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BB1D951C473118007D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60BB1D971C473118007D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -351,6 +360,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601E45B11C48CE73008CBB9F /* 登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				601E45B21C48CE9B008CBB9F /* PKLandingViewController.h */,
+				601E45B31C48CE9B008CBB9F /* PKLandingViewController.m */,
+				601E45B51C48D01D008CBB9F /* view */,
+			);
+			name = "登陆";
+			sourceTree = "<group>";
+		};
+		601E45B51C48D01D008CBB9F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				601E45B61C48D0A8008CBB9F /* PKThirdLandingView.h */,
+				601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */,
+				601E45BC1C48EE18008CBB9F /* PKEmailLandingView.h */,
+				601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		60BB1D881C473118007D8F51 = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +407,7 @@
 				60BB1D971C473118007D8F51 /* AppDelegate.h */,
 				60BB1D981C473118007D8F51 /* AppDelegate.m */,
 				60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */,
+				601E45B11C48CE73008CBB9F /* 登陆 */,
 				60BB1EE71C4775FD007D8F51 /* 首页 */,
 				60BB1EE31C4774E6007D8F51 /* 左侧菜单 */,
 				60BB1EBD1C473685007D8F51 /* 工具类 */,
@@ -898,8 +929,10 @@
 				60BB1E9A1C4733A9007D8F51 /* MJDIYAutoFooter.m in Sources */,
 				60BB1E741C4733A9007D8F51 /* AFURLConnectionOperation.m in Sources */,
 				60BB1E861C4733A9007D8F51 /* NSArray+MASAdditions.m in Sources */,
+				601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */,
 				60BB1E891C4733A9007D8F51 /* MJRefreshAutoFooter.m in Sources */,
 				60BB1E7A1C4733A9007D8F51 /* UIAlertView+AFNetworking.m in Sources */,
+				601E45B41C48CE9B008CBB9F /* PKLandingViewController.m in Sources */,
 				60BB1E731C4733A9007D8F51 /* AFSecurityPolicy.m in Sources */,
 				60BB1EAB1C4733A9007D8F51 /* SDWebImageDownloaderOperation.m in Sources */,
 				60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */,
@@ -917,6 +950,7 @@
 				60BB1EAE1C4733A9007D8F51 /* UIButton+WebCache.m in Sources */,
 				60BB1EB41C4733A9007D8F51 /* UIView+WebCacheOperation.m in Sources */,
 				60BB1EDA1C4739A4007D8F51 /* ZJPNavigationController.m in Sources */,
+				601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */,
 				60BB1E8D1C4733A9007D8F51 /* MJRefreshHeader.m in Sources */,
 				60BB1E6F1C4733A9007D8F51 /* AFHTTPRequestOperation.m in Sources */,
 				60BB1E771C4733A9007D8F51 /* AFURLSessionManager.m in Sources */,
