@@ -24,25 +24,30 @@
     WS(weakSelf);
     [_leftheadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.view.mas_top);
-        make.height.equalTo(180);
+        make.height.equalTo(190);
         make.left.equalTo(weakSelf.view.mas_left);
         make.right.equalTo(weakSelf.view.mas_right).offset(-45);
     }];
     [self.view addSubview:self.leftTable];
+    [_leftTable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.leftheadView.mas_bottom);
+        make.right.equalTo(weakSelf.view.mas_right);
+        make.left.equalTo(weakSelf.view.mas_left);
+        make.bottom.equalTo(weakSelf.view.mas_bottom).offset(-60);
+    }];
     // Do any additional setup after loading the view.
 }
-
+//侧边顶部信息view
 - (PKLeftHeadView *)leftheadView{
     if (!_leftheadView) {
         _leftheadView = [[PKLeftHeadView alloc]init];
-        
     }
     return _leftheadView;
 }
-
+//中间切换试图的列表
 - (PKLeftTableView *)leftTable{
     if (!_leftTable) {
-        _leftTable = [[PKLeftTableView alloc]initWithFrame:CGRectMake(0, 165, VIEW_WIDTH-45, VIEW_HEIGHT-165) style:(UITableViewStylePlain)];
+        _leftTable = [[PKLeftTableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:(UITableViewStylePlain)];
     }
     return _leftTable;
 }
