@@ -7,7 +7,7 @@
 //
 
 #import "PKLoginView.h"
-
+#import "Masonry.h"
 @interface PKLoginView()
 
 @property (strong, nonatomic)               UILabel *lineLabel1;
@@ -21,14 +21,115 @@
 @end
 
 @implementation PKLoginView
-
+//320
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self addSubview:self.lineLabel1];
+        [self addSubview:self.lineLabel2];
+        [self addSubview:self.lineLabel3];
+        [self addSubview:self.usernameLabel];
+        [self addSubview:self.emailText];
+        [self addSubview:self.passwordText];
+        [self addSubview:self.passwordLabel];
+        [self addSubview:self.emailLabel];
+        [self addSubview:self.userNameText];
+        [self addSubview:self.manBtn];
+        [self addSubview:self.womanBtn];
+        [self addSubview:self.finishBtn];
+        [self addSubview:self.delegateBtn];
+        [self addSubview:self.delegateLabel];
+        [self addLayoutIn];
     }
     return self;
+}
+
+- (void)addLayoutIn{
+    WS(weakSelf);
+    [_manBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(CGSizeMake(50, 25));
+        make.top.equalTo(weakSelf.mas_top);
+        make.centerX.equalTo(weakSelf.mas_centerX).offset(-100);
+    }];
+    
+    [_womanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(CGSizeMake(50, 25));
+        make.top.equalTo(weakSelf.mas_top);
+        make.centerX.equalTo(weakSelf.mas_centerX).offset(100);
+    }];
+    
+    [_lineLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.manBtn.mas_bottom).offset(60);
+        make.left.equalTo(weakSelf.mas_left).offset(40);
+        make.right.equalTo(weakSelf.mas_right).offset(-40);
+        make.height.equalTo(0.5);
+    }];
+    [_lineLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.lineLabel1.mas_bottom).offset(55);
+        make.left.equalTo(weakSelf.mas_left).offset(40);
+        make.right.equalTo(weakSelf.mas_right).offset(-40);
+        make.height.equalTo(0.5);
+    }];
+    [_lineLabel3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.lineLabel2.mas_bottom).offset(55);
+        make.left.equalTo(weakSelf.mas_left).offset(40);
+        make.right.equalTo(weakSelf.mas_right).offset(-40);
+        make.height.equalTo(0.5);
+    }];
+    [_usernameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.lineLabel1.mas_left);
+        make.size.equalTo(CGSizeMake(35, 13));
+        make.bottom.equalTo(weakSelf.lineLabel1.mas_top).offset(-10);
+    }];
+    [_emailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.lineLabel2.mas_left);
+        make.size.equalTo(CGSizeMake(35, 13));
+        make.bottom.equalTo(weakSelf.lineLabel2.mas_top).offset(-10);
+    }];
+    [_passwordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.lineLabel3.mas_left);
+        make.size.equalTo(CGSizeMake(35, 13));
+        make.bottom.equalTo(weakSelf.lineLabel3.mas_top).offset(-10);
+    }];
+    
+    [_userNameText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.usernameLabel.mas_right).offset(5);
+        make.right.equalTo(weakSelf.lineLabel1.mas_right);
+        make.height.equalTo(33);
+        make.bottom.equalTo(weakSelf.lineLabel1.mas_top);
+    }];
+    [_emailText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.emailLabel.mas_right).offset(5);
+        make.right.equalTo(weakSelf.lineLabel2.mas_right);
+        make.height.equalTo(33);
+        make.bottom.equalTo(weakSelf.lineLabel2.mas_top);
+    }];
+    [_passwordText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.passwordLabel.mas_right).offset(5);
+        make.right.equalTo(weakSelf.lineLabel3.mas_right);
+        make.height.equalTo(33);
+        make.bottom.equalTo(weakSelf.lineLabel3.mas_top);
+    }];
+    
+    [_finishBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.mas_left).offset(40);
+        make.right.equalTo(weakSelf.mas_right).offset(-40);
+        make.height.equalTo(45);
+        make.top.equalTo(weakSelf.lineLabel3.mas_bottom).offset(30);
+    }];
+    
+    [_delegateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(weakSelf.mas_left).offset(40);
+        make.centerX.equalTo(weakSelf.mas_centerX).offset(-50);
+        make.size.equalTo(CGSizeMake(200, 15));
+        make.top.equalTo(weakSelf.finishBtn.mas_bottom).offset(45);
+    }];
+    [_delegateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.delegateLabel.mas_right).offset(20);
+        make.size.equalTo(CGSizeMake(50, 15));
+        make.top.equalTo(weakSelf.finishBtn.mas_bottom).offset(45);
+    }];
 }
 
 - (UILabel *)lineLabel1{
@@ -112,7 +213,7 @@
     if (!_manBtn) {
         _manBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_manBtn setBackgroundImage:[UIImage imageNamed:@"男"] forState:(UIControlStateNormal)];
-        [_manBtn setBackgroundImage:[UIImage imageNamed:@"难_sel"] forState:(UIControlStateSelected)];
+        [_manBtn setBackgroundImage:[UIImage imageNamed:@"男_sel"] forState:(UIControlStateSelected)];
         _manBtn.selected = NO;
     }
     return _manBtn;
