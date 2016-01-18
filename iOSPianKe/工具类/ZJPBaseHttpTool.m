@@ -24,7 +24,7 @@ static NSString *const kBaseURLString = REQUESTURL;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[AFHttpClient alloc]initWithBaseURL:[NSURL URLWithString:kBaseURLString]];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
-        _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/javascript",@"text/plain", nil];
+        _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/javascript",@"text/plain",@"application/x-javascript", nil];
         
     });
     return _sharedClient;
@@ -73,7 +73,6 @@ static NSString *const kBaseURLString = REQUESTURL;
              success:(HttpSuccessBlock)success
              failure:(HttpFailureBlock)failure {
     AFHttpClient *manager = [AFHttpClient sharedClient];
-    path = [NSString stringWithFormat:@"http://api2.pianke.me/user/reg"];
     [manager POST:path parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         UIImage * image = [UIImage imageWithContentsOfFile:imagePath];
         NSData *imageData = UIImageJPEGRepresentation(image, 1);

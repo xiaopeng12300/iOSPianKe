@@ -50,13 +50,13 @@
     [_manBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(50, 25));
         make.top.equalTo(weakSelf.mas_top);
-        make.centerX.equalTo(weakSelf.mas_centerX).offset(-100);
+        make.centerX.equalTo(weakSelf.mas_centerX).offset(-50);
     }];
     
     [_womanBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(50, 25));
         make.top.equalTo(weakSelf.mas_top);
-        make.centerX.equalTo(weakSelf.mas_centerX).offset(100);
+        make.centerX.equalTo(weakSelf.mas_centerX).offset(50);
     }];
     
     [_lineLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -120,7 +120,6 @@
     }];
     
     [_delegateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(weakSelf.mas_left).offset(40);
         make.centerX.equalTo(weakSelf.mas_centerX).offset(-50);
         make.size.equalTo(CGSizeMake(200, 15));
         make.top.equalTo(weakSelf.finishBtn.mas_bottom).offset(45);
@@ -202,35 +201,18 @@
     if (!_delegateLabel) {
         _delegateLabel = [[UILabel alloc]init];
         _delegateLabel.text = @"点击“完成”按钮，代表您已阅读同意";
-        _delegateLabel.textAlignment = NSTextAlignmentLeft;
+        _delegateLabel.textAlignment = NSTextAlignmentRight;
         _delegateLabel.textColor = [UIColor blackColor];
         _delegateLabel.font = [UIFont systemFontOfSize:11.0];
     }
     return _delegateLabel;
 }
 
-- (UIButton *)manBtn{
-    if (!_manBtn) {
-        _manBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        [_manBtn setBackgroundImage:[UIImage imageNamed:@"男"] forState:(UIControlStateNormal)];
-        [_manBtn setBackgroundImage:[UIImage imageNamed:@"男_sel"] forState:(UIControlStateSelected)];
-        _manBtn.selected = NO;
-    }
-    return _manBtn;
-}
-- (UIButton *)womanBtn{
-    if (!_womanBtn) {
-        _womanBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        [_womanBtn setBackgroundImage:[UIImage imageNamed:@"女"] forState:(UIControlStateNormal)];
-        [_womanBtn setBackgroundImage:[UIImage imageNamed:@"女_sel"] forState:(UIControlStateSelected)];
-        _womanBtn.selected = NO;
-    }
-    return _womanBtn;
-}
 - (UIButton *)finishBtn{
     if (!_finishBtn) {
         _finishBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        [_finishBtn setTitleColor:RGB(119, 182, 69) forState:(UIControlStateNormal)];
+        [_finishBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        _finishBtn.backgroundColor = RGB(119, 182, 69);
         [_finishBtn setTitle:@"完成" forState:(UIControlStateNormal)];
         _finishBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
     }
@@ -263,6 +245,41 @@
         _passwordText.textColor = [UIColor blackColor];
     }
     return _passwordText;
+}
+
+- (UIButton *)manBtn{
+    if (!_manBtn) {
+        _manBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_manBtn setBackgroundImage:[UIImage imageNamed:@"男"] forState:(UIControlStateNormal)];
+        [_manBtn setBackgroundImage:[UIImage imageNamed:@"男_sel"] forState:(UIControlStateSelected)];
+        _manBtn.tag = 100;
+        [_manBtn addTarget:self action:@selector(changeSexBtnMethod:) forControlEvents:(UIControlEventTouchUpInside)];
+        _manBtn.selected = NO;
+    }
+    return _manBtn;
+}
+- (UIButton *)womanBtn{
+    if (!_womanBtn) {
+        _womanBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_womanBtn setBackgroundImage:[UIImage imageNamed:@"女"] forState:(UIControlStateNormal)];
+        [_womanBtn setBackgroundImage:[UIImage imageNamed:@"女_sel"] forState:(UIControlStateSelected)];
+        _womanBtn.tag = 101;
+        [_womanBtn addTarget:self action:@selector(changeSexBtnMethod:) forControlEvents:(UIControlEventTouchUpInside)];
+        _womanBtn.selected = NO;
+    }
+    return _womanBtn;
+}
+
+- (void)changeSexBtnMethod:(UIButton *)sender{
+    if (self.manBtn.selected == NO && self.womanBtn.selected == NO) {
+        sender.selected = YES;
+    }else if (sender.tag == 100){
+        sender.selected = YES;
+        _womanBtn.selected = NO;
+    }else if (sender.tag == 101){
+        sender.selected = YES;
+        _manBtn.selected = NO;
+    }
 }
 @end
 
