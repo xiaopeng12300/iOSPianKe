@@ -9,6 +9,7 @@
 #import "PKLandingViewController.h"
 #import "PKThirdLandingView.h"//第三方登录view
 #import "PKEmailLandingView.h"//邮箱正常登陆
+
 @interface PKLandingViewController ()<UITextFieldDelegate>
 @property (strong, nonatomic)PKThirdLandingView *thirdLandingView;
 @property (strong, nonatomic)           PKEmailLandingView *emailLandingView;
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view  addSubview:self.thirdLandingView];
     
     [self.view addSubview:self.emailLandingView];
@@ -97,6 +99,7 @@
     }
     return _loginBtn;
 }
+
 - (UIButton *)returnBtn{
     if (!_returnBtn) {
         _returnBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];

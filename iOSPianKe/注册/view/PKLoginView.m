@@ -135,7 +135,7 @@
 - (UILabel *)lineLabel1{
     if (!_lineLabel1) {
         _lineLabel1 = [[UILabel alloc]init];
-        _lineLabel2.backgroundColor = [UIColor lightGrayColor];
+        _lineLabel1.backgroundColor = [UIColor lightGrayColor];
     }
     return _lineLabel1;
 }
