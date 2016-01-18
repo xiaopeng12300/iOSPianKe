@@ -10,6 +10,8 @@
 		601E45B41C48CE9B008CBB9F /* PKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B31C48CE9B008CBB9F /* PKLandingViewController.m */; };
 		601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */; };
 		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
+		60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D981C4C810900D2CEBC /* PKLoginViewController.m */; };
+		60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9C1C4C829700D2CEBC /* PKLoginView.m */; };
 		60BB1D961C473118007D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D951C473118007D8F51 /* main.m */; };
 		60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D981C473118007D8F51 /* AppDelegate.m */; };
 		60BB1D9F1C473118007D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BB1D9D1C473118007D8F51 /* Main.storyboard */; };
@@ -132,6 +134,10 @@
 		601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKThirdLandingView.m; path = "登陆/view/PKThirdLandingView.m"; sourceTree = "<group>"; };
 		601E45BC1C48EE18008CBB9F /* PKEmailLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKEmailLandingView.h; path = "登陆/view/PKEmailLandingView.h"; sourceTree = "<group>"; };
 		601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKEmailLandingView.m; path = "登陆/view/PKEmailLandingView.m"; sourceTree = "<group>"; };
+		60B33D971C4C810900D2CEBC /* PKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginViewController.h; path = "注册/PKLoginViewController.h"; sourceTree = "<group>"; };
+		60B33D981C4C810900D2CEBC /* PKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginViewController.m; path = "注册/PKLoginViewController.m"; sourceTree = "<group>"; };
+		60B33D9B1C4C829700D2CEBC /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginView.h; path = "注册/view/PKLoginView.h"; sourceTree = "<group>"; };
+		60B33D9C1C4C829700D2CEBC /* PKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginView.m; path = "注册/view/PKLoginView.m"; sourceTree = "<group>"; };
 		60BB1D911C473118007D8F51 /* iOSPianKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPianKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BB1D951C473118007D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60BB1D971C473118007D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -381,6 +387,25 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		60B33D961C4C80EF00D2CEBC /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				60B33D971C4C810900D2CEBC /* PKLoginViewController.h */,
+				60B33D981C4C810900D2CEBC /* PKLoginViewController.m */,
+				60B33D9A1C4C827D00D2CEBC /* view */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
+		60B33D9A1C4C827D00D2CEBC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60B33D9B1C4C829700D2CEBC /* PKLoginView.h */,
+				60B33D9C1C4C829700D2CEBC /* PKLoginView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		60BB1D881C473118007D8F51 = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +432,7 @@
 				60BB1D971C473118007D8F51 /* AppDelegate.h */,
 				60BB1D981C473118007D8F51 /* AppDelegate.m */,
 				60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */,
+				60B33D961C4C80EF00D2CEBC /* 注册 */,
 				601E45B11C48CE73008CBB9F /* 登陆 */,
 				60BB1EE71C4775FD007D8F51 /* 首页 */,
 				60BB1EE31C4774E6007D8F51 /* 左侧菜单 */,
@@ -927,6 +953,7 @@
 				60BB1E8C1C4733A9007D8F51 /* MJRefreshFooter.m in Sources */,
 				60BB1EF21C47A0FC007D8F51 /* PKLeftTableView.m in Sources */,
 				60BB1E9A1C4733A9007D8F51 /* MJDIYAutoFooter.m in Sources */,
+				60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */,
 				60BB1E741C4733A9007D8F51 /* AFURLConnectionOperation.m in Sources */,
 				60BB1E861C4733A9007D8F51 /* NSArray+MASAdditions.m in Sources */,
 				601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */,
@@ -995,6 +1022,7 @@
 				60BB1EA91C4733A9007D8F51 /* SDWebImageDecoder.m in Sources */,
 				60BB1ED21C473685007D8F51 /* UIView+Toast.m in Sources */,
 				60BB1EB11C4733A9007D8F51 /* UIImage+WebP.m in Sources */,
+				60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */,
 				60BB1EA01C4733A9007D8F51 /* UIScrollView+MJRefresh.m in Sources */,
 				60BB1D961C473118007D8F51 /* main.m in Sources */,
 				60BB1EAC1C4733A9007D8F51 /* SDWebImageManager.m in Sources */,
