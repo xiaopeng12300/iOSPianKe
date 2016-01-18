@@ -78,22 +78,32 @@
 }
 
 - (void)loginHttpRequest{
-    [_loginView.emailText resignFirstResponder];
-    [_loginView.passwordText resignFirstResponder];
-    [_loginView.userNameText resignFirstResponder];
+    //点击完成的时候隐藏键盘
+    [self disMissKeyboard];
+    //判断用户名是否为空，isEmptyString方法是NSString + helper中的
     if ([_loginView.userNameText.text isEmptyString]) {
         [self.view makeToast:@"用户名不能为空" duration:1 position:@"center"];
-    }else if ([_loginView.passwordText.text isEmptyString]){
+    }
+    //判断密码是否为空，isEmptyString方法是NSString + helper中的
+    else if ([_loginView.passwordText.text isEmptyString]){
         [self.view makeToast:@"密码不能为空" duration:1 position:@"center"];
-    }else if ([_loginView.emailText.text isEmptyString]){
+    }
+    //判断邮箱是否为空，isEmptyString方法是NSString + helper中的
+    else if ([_loginView.emailText.text isEmptyString]){
         [self.view makeToast:@"邮箱不能为空" duration:1 position:@"center"];
-    }else if ([_ImageBtn.currentImage isEqual:[UIImage imageNamed:@"上传头像"]]){
+    }
+    //判断头像是否为空，isEmptyString方法是NSString + helper中的
+    else if ([_ImageBtn.currentImage isEqual:[UIImage imageNamed:@"上传头像"]]){
         [self.view makeToast:@"头像不能为空" duration:1 position:@"center"];
-    }else{
+    }
+    else{
+        //开始进行网络请求，上传头像到服务器
         WS(weakSelf);
         [ZJPBaseHttpTool postImagePath:@"http://api2.pianke.me/user/reg" params:[self makeLoginRequestDic] image:_imageFiled success:^(id JSON) {
             NSDictionary *returnDic = JSON;
+            //判断是否成功，如果result为 1 ，注册成功，result为0，查看返回字典中data字段中msg的错误原因
             if ([returnDic[@"result"] integerValue] == 1) {
+                //成功后的提示框，方法在 UIView+Toast 中，第一个参数是提示的内容，第二个是显示时间，第三个是显示位置，一共有三个
                 [weakSelf.view makeToast:@"注册成功" duration:1 position:@"center"];
             }else{
                 [weakSelf.view makeToast:[returnDic[@"data"] valueForKey:@"msg"] duration:1 position:@"center"];
@@ -104,7 +114,7 @@
         }];
     }
 }
-
+//制作请求参数
 - (NSDictionary *)makeLoginRequestDic{
     NSDictionary *dic = @{@"client":@"1",
                           @"deviceid":@"A55AF7DB-88C8-408D-B983-D0B9C9CA0B36",
@@ -143,20 +153,27 @@
     }
 }
 
+//UIImagePickerController的代理方法，选择好照片后会调用
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    //获得图片
     UIImage *editedImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
-    
+    //获取沙盒目录
     NSString *homePath = [NSHomeDirectory() stringByAppendingString:@"/Documents"];
     NSLog(@"------------%@",homePath);
+    //将图片名字拼接到路径后面
     NSString *imageViews   = [homePath stringByAppendingFormat:@"/%d.png", arc4random_uniform(1000000)];
+    //将图片写入沙盒
     [UIImageJPEGRepresentation(editedImage, 1.0f) writeToFile:imageViews atomically:YES];
+    //将图片路径保存下来，因为在上传图片的时候会用到
     self.imageFiled = imageViews;
+    //更新imageBtn的图片
     [_ImageBtn setImage:editedImage forState:(UIControlStateNormal)];
     //关闭相册界面
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 键盘上移方法
+//开始编辑的时候屏幕上移
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     WS(weakSelf);
     if (textField == _loginView.userNameText) {
@@ -180,11 +197,9 @@
     }
     return YES;
 }
-
+//点击return隐藏键盘
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [_loginView.emailText resignFirstResponder];
-    [_loginView.passwordText resignFirstResponder];
-    [_loginView.userNameText resignFirstResponder];
+    [self disMissKeyboard];
     WS(weakSelf);
     [UIView animateWithDuration:0.3 animations:^{
         CGRect rect = weakSelf.view.bounds;
@@ -193,11 +208,9 @@
     }];
     return YES;
 }
-
+//点击屏幕键盘消失
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [_loginView.emailText resignFirstResponder];
-    [_loginView.passwordText resignFirstResponder];
-    [_loginView.userNameText resignFirstResponder];
+    [self disMissKeyboard];
     WS(weakSelf);
     [UIView animateWithDuration:0.3 animations:^{
         CGRect rect = weakSelf.view.bounds;
@@ -205,7 +218,12 @@
         weakSelf.view.bounds = rect;
     }];
 }
-
+//隐藏键盘的方法
+- (void)disMissKeyboard{
+    [_loginView.emailText resignFirstResponder];
+    [_loginView.passwordText resignFirstResponder];
+    [_loginView.userNameText resignFirstResponder];
+}
 - (void)dismissView{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
