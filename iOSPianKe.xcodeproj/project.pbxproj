@@ -12,6 +12,7 @@
 		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
 		60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D981C4C810900D2CEBC /* PKLoginViewController.m */; };
 		60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9C1C4C829700D2CEBC /* PKLoginView.m */; };
+		60B33DA01C4D4C9100D2CEBC /* PKHomeFragmentTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */; };
 		60BB1D961C473118007D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D951C473118007D8F51 /* main.m */; };
 		60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D981C473118007D8F51 /* AppDelegate.m */; };
 		60BB1D9F1C473118007D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BB1D9D1C473118007D8F51 /* Main.storyboard */; };
@@ -108,6 +109,12 @@
 		60BB1EF21C47A0FC007D8F51 /* PKLeftTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF11C47A0FC007D8F51 /* PKLeftTableView.m */; };
 		60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */; };
 		60BB1F041C489619007D8F51 /* PKLeftMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1F031C489619007D8F51 /* PKLeftMusicView.m */; };
+		60BCBF281C4E238F008DD3E6 /* PKFragmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF271C4E238F008DD3E6 /* PKFragmentViewController.m */; };
+		60BCBF301C4E23CC008DD3E6 /* PKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF2F1C4E23CC008DD3E6 /* PKSettingViewController.m */; };
+		60BCBF331C4E23F0008DD3E6 /* PKGoodProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF321C4E23F0008DD3E6 /* PKGoodProductsViewController.m */; };
+		60BCBF361C4E240C008DD3E6 /* PKCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF351C4E240C008DD3E6 /* PKCommunityViewController.m */; };
+		60BCBF391C4E2420008DD3E6 /* PKReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF381C4E2420008DD3E6 /* PKReadViewController.m */; };
+		60BCBF3C1C4E2443008DD3E6 /* PKRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF3B1C4E2443008DD3E6 /* PKRadioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +145,8 @@
 		60B33D981C4C810900D2CEBC /* PKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginViewController.m; path = "注册/PKLoginViewController.m"; sourceTree = "<group>"; };
 		60B33D9B1C4C829700D2CEBC /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginView.h; path = "注册/view/PKLoginView.h"; sourceTree = "<group>"; };
 		60B33D9C1C4C829700D2CEBC /* PKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginView.m; path = "注册/view/PKLoginView.m"; sourceTree = "<group>"; };
+		60B33D9E1C4D4C9100D2CEBC /* PKHomeFragmentTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKHomeFragmentTable.h; path = "首页/view/PKHomeFragmentTable.h"; sourceTree = "<group>"; };
+		60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKHomeFragmentTable.m; path = "首页/view/PKHomeFragmentTable.m"; sourceTree = "<group>"; };
 		60BB1D911C473118007D8F51 /* iOSPianKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPianKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BB1D951C473118007D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60BB1D971C473118007D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -339,6 +348,18 @@
 		60BB1EF71C47A3C1007D8F51 /* PKLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftTableViewCell.m; path = "左侧菜单/view/PKLeftTableViewCell.m"; sourceTree = "<group>"; };
 		60BB1F021C489619007D8F51 /* PKLeftMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLeftMusicView.h; path = "左侧菜单/view/PKLeftMusicView.h"; sourceTree = "<group>"; };
 		60BB1F031C489619007D8F51 /* PKLeftMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLeftMusicView.m; path = "左侧菜单/view/PKLeftMusicView.m"; sourceTree = "<group>"; };
+		60BCBF261C4E238F008DD3E6 /* PKFragmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKFragmentViewController.h; path = "碎片/PKFragmentViewController.h"; sourceTree = "<group>"; };
+		60BCBF271C4E238F008DD3E6 /* PKFragmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKFragmentViewController.m; path = "碎片/PKFragmentViewController.m"; sourceTree = "<group>"; };
+		60BCBF2E1C4E23CC008DD3E6 /* PKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKSettingViewController.h; path = "设置/PKSettingViewController.h"; sourceTree = "<group>"; };
+		60BCBF2F1C4E23CC008DD3E6 /* PKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKSettingViewController.m; path = "设置/PKSettingViewController.m"; sourceTree = "<group>"; };
+		60BCBF311C4E23F0008DD3E6 /* PKGoodProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKGoodProductsViewController.h; path = "良品/PKGoodProductsViewController.h"; sourceTree = "<group>"; };
+		60BCBF321C4E23F0008DD3E6 /* PKGoodProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKGoodProductsViewController.m; path = "良品/PKGoodProductsViewController.m"; sourceTree = "<group>"; };
+		60BCBF341C4E240C008DD3E6 /* PKCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKCommunityViewController.h; path = "社区/PKCommunityViewController.h"; sourceTree = "<group>"; };
+		60BCBF351C4E240C008DD3E6 /* PKCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKCommunityViewController.m; path = "社区/PKCommunityViewController.m"; sourceTree = "<group>"; };
+		60BCBF371C4E2420008DD3E6 /* PKReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKReadViewController.h; path = "阅读/PKReadViewController.h"; sourceTree = "<group>"; };
+		60BCBF381C4E2420008DD3E6 /* PKReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKReadViewController.m; path = "阅读/PKReadViewController.m"; sourceTree = "<group>"; };
+		60BCBF3A1C4E2443008DD3E6 /* PKRadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRadioViewController.h; path = "电台/PKRadioViewController.h"; sourceTree = "<group>"; };
+		60BCBF3B1C4E2443008DD3E6 /* PKRadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRadioViewController.m; path = "电台/PKRadioViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +427,15 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		60B33DA11C4D4C9500D2CEBC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60B33D9E1C4D4C9100D2CEBC /* PKHomeFragmentTable.h */,
+				60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		60BB1D881C473118007D8F51 = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +462,12 @@
 				60BB1D971C473118007D8F51 /* AppDelegate.h */,
 				60BB1D981C473118007D8F51 /* AppDelegate.m */,
 				60BB1EE21C4745E8007D8F51 /* PrefixHeader.pch */,
+				60BCBF2D1C4E23B6008DD3E6 /* 设置 */,
+				60BCBF2C1C4E23B1008DD3E6 /* 良品 */,
+				60BCBF2B1C4E23AD008DD3E6 /* 社区 */,
+				60BCBF2A1C4E23A9008DD3E6 /* 阅读 */,
+				60BCBF291C4E2393008DD3E6 /* 电台 */,
+				60BCBF251C4E2356008DD3E6 /* 碎片 */,
 				60B33D961C4C80EF00D2CEBC /* 注册 */,
 				601E45B11C48CE73008CBB9F /* 登陆 */,
 				60BB1EE71C4775FD007D8F51 /* 首页 */,
@@ -788,6 +824,7 @@
 			children = (
 				60BB1EE91C477672007D8F51 /* PKHomeViewController.h */,
 				60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */,
+				60B33DA11C4D4C9500D2CEBC /* view */,
 			);
 			name = "首页";
 			sourceTree = "<group>";
@@ -805,6 +842,60 @@
 				60BB1F031C489619007D8F51 /* PKLeftMusicView.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		60BCBF251C4E2356008DD3E6 /* 碎片 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF261C4E238F008DD3E6 /* PKFragmentViewController.h */,
+				60BCBF271C4E238F008DD3E6 /* PKFragmentViewController.m */,
+			);
+			name = "碎片";
+			sourceTree = "<group>";
+		};
+		60BCBF291C4E2393008DD3E6 /* 电台 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF3A1C4E2443008DD3E6 /* PKRadioViewController.h */,
+				60BCBF3B1C4E2443008DD3E6 /* PKRadioViewController.m */,
+			);
+			name = "电台";
+			sourceTree = "<group>";
+		};
+		60BCBF2A1C4E23A9008DD3E6 /* 阅读 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF371C4E2420008DD3E6 /* PKReadViewController.h */,
+				60BCBF381C4E2420008DD3E6 /* PKReadViewController.m */,
+			);
+			name = "阅读";
+			sourceTree = "<group>";
+		};
+		60BCBF2B1C4E23AD008DD3E6 /* 社区 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF341C4E240C008DD3E6 /* PKCommunityViewController.h */,
+				60BCBF351C4E240C008DD3E6 /* PKCommunityViewController.m */,
+			);
+			name = "社区";
+			sourceTree = "<group>";
+		};
+		60BCBF2C1C4E23B1008DD3E6 /* 良品 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF311C4E23F0008DD3E6 /* PKGoodProductsViewController.h */,
+				60BCBF321C4E23F0008DD3E6 /* PKGoodProductsViewController.m */,
+			);
+			name = "良品";
+			sourceTree = "<group>";
+		};
+		60BCBF2D1C4E23B6008DD3E6 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF2E1C4E23CC008DD3E6 /* PKSettingViewController.h */,
+				60BCBF2F1C4E23CC008DD3E6 /* PKSettingViewController.m */,
+			);
+			name = "设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -939,6 +1030,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60BB1EB21C4733A9007D8F51 /* UIImageView+HighlightedWebCache.m in Sources */,
+				60BCBF281C4E238F008DD3E6 /* PKFragmentViewController.m in Sources */,
 				60BB1EAF1C4733A9007D8F51 /* UIImage+GIF.m in Sources */,
 				60BB1E971C4733A9007D8F51 /* MJChiBaoZiFooter.m in Sources */,
 				60BB1ECF1C473685007D8F51 /* UIColor+Extension.m in Sources */,
@@ -982,10 +1074,12 @@
 				60BB1E6F1C4733A9007D8F51 /* AFHTTPRequestOperation.m in Sources */,
 				60BB1E771C4733A9007D8F51 /* AFURLSessionManager.m in Sources */,
 				60BB1E761C4733A9007D8F51 /* AFURLResponseSerialization.m in Sources */,
+				60BCBF361C4E240C008DD3E6 /* PKCommunityViewController.m in Sources */,
 				60BB1E871C4733A9007D8F51 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				60BB1E821C4733A9007D8F51 /* MASConstraintMaker.m in Sources */,
 				60BB1ECE1C473685007D8F51 /* NSString+Helper.m in Sources */,
 				60BB1EB31C4733A9007D8F51 /* UIImageView+WebCache.m in Sources */,
+				60B33DA01C4D4C9100D2CEBC /* PKHomeFragmentTable.m in Sources */,
 				60BB1EDE1C473A2F007D8F51 /* UIBarButtonItem+Helper.m in Sources */,
 				60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */,
 				60BB1E7D1C4733A9007D8F51 /* UIProgressView+AFNetworking.m in Sources */,
@@ -994,6 +1088,7 @@
 				60BB1EA51C4733A9007D8F51 /* MKAnnotationView+WebCache.m in Sources */,
 				60BB1E831C4733A9007D8F51 /* MASLayoutConstraint.m in Sources */,
 				60BB1E9E1C4733A9007D8F51 /* MJRefreshConst.m in Sources */,
+				60BCBF301C4E23CC008DD3E6 /* PKSettingViewController.m in Sources */,
 				60BB1E921C4733A9007D8F51 /* MJRefreshBackNormalFooter.m in Sources */,
 				60BB1E711C4733A9007D8F51 /* AFHTTPSessionManager.m in Sources */,
 				60BB1E8A1C4733A9007D8F51 /* MJRefreshBackFooter.m in Sources */,
@@ -1009,7 +1104,9 @@
 				60BB1EA11C4733A9007D8F51 /* UIView+MJExtension.m in Sources */,
 				60BB1E9B1C4733A9007D8F51 /* MJDIYBackFooter.m in Sources */,
 				60BB1E8F1C4733A9007D8F51 /* MJRefreshAutoNormalFooter.m in Sources */,
+				60BCBF3C1C4E2443008DD3E6 /* PKRadioViewController.m in Sources */,
 				60BB1E911C4733A9007D8F51 /* MJRefreshBackGifFooter.m in Sources */,
+				60BCBF331C4E23F0008DD3E6 /* PKGoodProductsViewController.m in Sources */,
 				60BB1E7C1C4733A9007D8F51 /* UIImageView+AFNetworking.m in Sources */,
 				60BB1E7B1C4733A9007D8F51 /* UIButton+AFNetworking.m in Sources */,
 				60BB1E7E1C4733A9007D8F51 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1027,6 +1124,7 @@
 				60BB1D961C473118007D8F51 /* main.m in Sources */,
 				60BB1EAC1C4733A9007D8F51 /* SDWebImageManager.m in Sources */,
 				60BB1E791C4733A9007D8F51 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				60BCBF391C4E2420008DD3E6 /* PKReadViewController.m in Sources */,
 				60BB1EEF1C477CBA007D8F51 /* PKLeftHeadView.m in Sources */,
 				60BB1ED01C473685007D8F51 /* UIImage+Helper.m in Sources */,
 				60BB1E951C4733A9007D8F51 /* MJRefreshNormalHeader.m in Sources */,

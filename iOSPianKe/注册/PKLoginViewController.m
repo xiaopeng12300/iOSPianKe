@@ -108,7 +108,7 @@
             }else{
                 [weakSelf.view makeToast:[returnDic[@"data"] valueForKey:@"msg"] duration:1 position:@"center"];
             }
-            
+            [JPRefreshView removeJPRefreshFromView:weakSelf.view];
         } failure:^(NSError *error) {
             [weakSelf.view makeToast:@"注册失败" duration:1 position:@"center"];
         }];

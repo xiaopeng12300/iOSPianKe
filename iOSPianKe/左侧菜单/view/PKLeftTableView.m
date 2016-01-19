@@ -51,6 +51,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ([_RowDelegate performSelector:@selector(selectWhichRow:)]) {
+        [_RowDelegate selectWhichRow:indexPath.row];
+    }
 }
 @end

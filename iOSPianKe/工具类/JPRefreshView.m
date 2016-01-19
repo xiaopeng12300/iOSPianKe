@@ -8,11 +8,11 @@
 
 #import "JPRefreshView.h"
 
-#define Refrsh_WIDTH 100
-#define Refrsh_HEIGHT 100
+#define Refrsh_WIDTH 60
+#define Refrsh_HEIGHT 60
 
-#define IMAGEVIEW_WIDTH 80
-#define IMAGEVIEW_HEIGHT 80
+#define IMAGEVIEW_WIDTH 40
+#define IMAGEVIEW_HEIGHT 40
 
 #define MARK_WORD_HEIGHT 20
 #define MARK_WORD @"" //提示文字
@@ -78,7 +78,7 @@
 - (UIView *)refreshview{
     if (!_refreshview) {
         _refreshview = [[UIView alloc]initWithFrame:CGRectMake(VIEW_WIDTH/2 - Refrsh_WIDTH/2, VIEW_HEIGHT/2 - Refrsh_HEIGHT/2, Refrsh_WIDTH, Refrsh_HEIGHT)];
-        _refreshview.backgroundColor = RGB(26, 21, 37);
+        _refreshview.backgroundColor = [UIColor clearColor];
         _refreshview.layer.masksToBounds = YES;
         _refreshview.layer.cornerRadius = 10;
     }
@@ -117,8 +117,8 @@
 - (NSArray *)refreshIamgesArray {
     
     NSMutableArray *marr = [NSMutableArray array];
-    for (int i = 0; i <= 14; i++) {
-        NSString *name = [NSString stringWithFormat:@"loading_animate_%i",i];
+    for (int i = 0; i <= 28; i++) {
+        NSString *name = [NSString stringWithFormat:@"refresh%i",i];
         [marr addObject:name];
     }
     NSMutableArray *marrImages = [NSMutableArray array];
