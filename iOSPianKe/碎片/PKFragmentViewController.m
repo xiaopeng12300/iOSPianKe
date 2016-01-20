@@ -37,10 +37,12 @@
     if (!_fragmentTable) {
         _fragmentTable = [[PKFragmentTable alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:(UITableViewStylePlain)];
         WS(weakSelf);
+        //上拉加载的block回调方法
         _fragmentTable.MoreDataBlock = ^(){
             // 隐藏当前的上拉刷新控件
             [weakSelf reloadFragmentTabelData:0];
         };
+        //下拉加载的block回调方法
         _fragmentTable.NewDataBlock = ^(){
             [weakSelf reloadFragmentTabelData:10];
         };
@@ -68,6 +70,7 @@
             
             //tableview用来存储数据的数组
             weakSelf.fragmentTable.FragmentModel = weakSelf.FragmentModel.data.list;
+            //给tableviewcell高度的数组赋值
             weakSelf.fragmentTable.cellHeightArray = heightArray;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.fragmentTable reloadData];

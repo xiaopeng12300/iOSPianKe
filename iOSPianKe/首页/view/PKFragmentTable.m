@@ -24,6 +24,7 @@
     if (self) {
         self.delegate = self;
         self.dataSource = self;
+        //添加mj刷新
         [self addRefreshControl];
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
@@ -48,12 +49,8 @@
     self.mj_footer = footer;
 }
 
-//- (void)setCellHeightArray:(NSArray *)cellHeightArray{
-//    _cellHeightArray = cellHeightArray;
-////    [self reloadData];
-//}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    //根据高度数组中元素的个数来确定tableview显示cell的数量
     return _cellHeightArray.count;
 }
 
@@ -69,7 +66,9 @@
     if (!cell) {
         cell = [[PKFragmentTableCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellId];
     }
+    //传给cell的高度字典
     cell.heightDic = _cellHeightArray[indexPath.row];
+    //传给cell的内容模型
     cell.counterList = _FragmentModel[indexPath.row];
     return cell;
 }

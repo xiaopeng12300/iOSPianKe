@@ -46,6 +46,7 @@
     return self;
 }
 
+//通过set方法在counterList刚被赋值时，对其他控件进行赋值
 - (void)setCounterList:(PKFragmentList *)counterList{
     _counterList = counterList;
     [_iconImage downloadImage:counterList.userinfo.icon];
@@ -53,7 +54,9 @@
     _timeLabel.text = counterList.addtimeF;
     _likeLabel.text = [NSString stringWithFormat:@"%li",counterList.counterList.like];
     _writeLabel.text = [NSString stringWithFormat:@"%li",counterList.counterList.comment];
+    //加载网络图片方法（UIImageView+SDWedImage中）
     [_contentImage downloadImage:_counterList.coverimg];
+    //label调用属性字符串
     _contentLabel.attributedText = [self makeText:counterList.content];
     
     CGFloat imageHeight = [_heightDic[@"imageHeight"] floatValue];
@@ -217,23 +220,29 @@
     }
     return _likeLabel;
 }
-
+//生成属性字符串
 - (NSAttributedString *)makeText :(NSString *)exampleString{
+    //段落类型
     NSMutableParagraphStyle * paragraph = [[NSMutableParagraphStyle alloc] init];
-    paragraph.lineSpacing = 10;//行间距
-    paragraph.paragraphSpacing = 20;//段落间隔
-    paragraph.firstLineHeadIndent = 30;//首行缩近
+    //行间距
+    paragraph.lineSpacing = 10;
+    //段落间隔
+    paragraph.paragraphSpacing = 20;
+    //首行缩近
+    paragraph.firstLineHeadIndent = 30;
+    //属性字典（[UIFont fontWithName:@"PingFangSC-Regular" size:15.0f]指定字符串使用的字体，因为iOS9中字体不是黑体是苹果体，不然在iOS9中字符高度计算容易出现错误）
     NSDictionary * dictA = @{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Regular" size:15.0f],
 //                             NSForegroundColorAttributeName:[UIColor greenColor],
 //                             NSBackgroundColorAttributeName:[UIColor grayColor],
                              NSParagraphStyleAttributeName:paragraph,
-                             //                             NSObliquenessAttributeName:@0.5 //斜体
-                             //                             NSStrokeColorAttributeName:[UIColor whiteColor],
-                             //                             NSStrokeWidthAttributeName:@2,//描边
-                             //                             NSKernAttributeName:@20,//字间距
-                             //                             NSStrikethroughStyleAttributeName:@2//删除线
-                             //                             NSUnderlineStyleAttributeName:@1,//下划线
+//                             NSObliquenessAttributeName:@0.5 //斜体
+//                             NSStrokeColorAttributeName:[UIColor whiteColor],
+//                             NSStrokeWidthAttributeName:@2,//描边
+//                             NSKernAttributeName:@20,//字间距
+//                             NSStrikethroughStyleAttributeName:@2//删除线
+//                             NSUnderlineStyleAttributeName:@1,//下划线
                              };
+    //返回属性字符串
     NSAttributedString * attribute = [[NSAttributedString alloc] initWithString:exampleString attributes:dictA];
     return attribute;
 }
