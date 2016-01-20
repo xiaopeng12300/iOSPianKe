@@ -90,10 +90,14 @@
     switch (row) {
         case 0:
         {
+            //初始化页面
             PKHomeViewController *homeController = [[PKHomeViewController alloc]init];
             homeController.title = @"首页";
+            //设置根视图
             ZJPNavigationController *homeNav = [[ZJPNavigationController alloc]initWithRootViewController:homeController];
+            //进行页面跳转
             [self.sideMenuViewController setContentViewController:homeNav animated:YES];
+            //隐藏侧边菜单
             [self.sideMenuViewController hideMenuViewController];
         }
             break;

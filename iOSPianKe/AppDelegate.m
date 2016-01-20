@@ -17,10 +17,13 @@
 
 @implementation AppDelegate
 
-
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    NSLog(@"111");
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    NSLog(@"2222");
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ZJPNavigationController *navigationController = [[ZJPNavigationController alloc] initWithRootViewController:[[PKHomeViewController alloc] init]];

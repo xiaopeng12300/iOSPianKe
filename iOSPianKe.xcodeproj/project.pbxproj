@@ -12,7 +12,7 @@
 		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
 		60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D981C4C810900D2CEBC /* PKLoginViewController.m */; };
 		60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9C1C4C829700D2CEBC /* PKLoginView.m */; };
-		60B33DA01C4D4C9100D2CEBC /* PKHomeFragmentTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */; };
+		60B33DA01C4D4C9100D2CEBC /* PKFragmentTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9F1C4D4C9100D2CEBC /* PKFragmentTable.m */; };
 		60BB1D961C473118007D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D951C473118007D8F51 /* main.m */; };
 		60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB1D981C473118007D8F51 /* AppDelegate.m */; };
 		60BB1D9F1C473118007D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BB1D9D1C473118007D8F51 /* Main.storyboard */; };
@@ -115,6 +115,9 @@
 		60BCBF361C4E240C008DD3E6 /* PKCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF351C4E240C008DD3E6 /* PKCommunityViewController.m */; };
 		60BCBF391C4E2420008DD3E6 /* PKReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF381C4E2420008DD3E6 /* PKReadViewController.m */; };
 		60BCBF3C1C4E2443008DD3E6 /* PKRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF3B1C4E2443008DD3E6 /* PKRadioViewController.m */; };
+		60BCBF4D1C4E8FE9008DD3E6 /* PKFragmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF451C4E8FE9008DD3E6 /* PKFragmentModel.m */; };
+		60BCBF531C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF521C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.m */; };
+		60BCBF571C4E97C3008DD3E6 /* PKFragmentTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BCBF561C4E97C3008DD3E6 /* PKFragmentTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,8 +148,8 @@
 		60B33D981C4C810900D2CEBC /* PKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginViewController.m; path = "注册/PKLoginViewController.m"; sourceTree = "<group>"; };
 		60B33D9B1C4C829700D2CEBC /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginView.h; path = "注册/view/PKLoginView.h"; sourceTree = "<group>"; };
 		60B33D9C1C4C829700D2CEBC /* PKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginView.m; path = "注册/view/PKLoginView.m"; sourceTree = "<group>"; };
-		60B33D9E1C4D4C9100D2CEBC /* PKHomeFragmentTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKHomeFragmentTable.h; path = "首页/view/PKHomeFragmentTable.h"; sourceTree = "<group>"; };
-		60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKHomeFragmentTable.m; path = "首页/view/PKHomeFragmentTable.m"; sourceTree = "<group>"; };
+		60B33D9E1C4D4C9100D2CEBC /* PKFragmentTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKFragmentTable.h; path = "首页/view/PKFragmentTable.h"; sourceTree = "<group>"; };
+		60B33D9F1C4D4C9100D2CEBC /* PKFragmentTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKFragmentTable.m; path = "首页/view/PKFragmentTable.m"; sourceTree = "<group>"; };
 		60BB1D911C473118007D8F51 /* iOSPianKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPianKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BB1D951C473118007D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60BB1D971C473118007D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -360,6 +363,12 @@
 		60BCBF381C4E2420008DD3E6 /* PKReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKReadViewController.m; path = "阅读/PKReadViewController.m"; sourceTree = "<group>"; };
 		60BCBF3A1C4E2443008DD3E6 /* PKRadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRadioViewController.h; path = "电台/PKRadioViewController.h"; sourceTree = "<group>"; };
 		60BCBF3B1C4E2443008DD3E6 /* PKRadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRadioViewController.m; path = "电台/PKRadioViewController.m"; sourceTree = "<group>"; };
+		60BCBF441C4E8FE9008DD3E6 /* PKFragmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKFragmentModel.h; sourceTree = "<group>"; };
+		60BCBF451C4E8FE9008DD3E6 /* PKFragmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKFragmentModel.m; sourceTree = "<group>"; };
+		60BCBF511C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+PKFragmentCellHeight.h"; path = "碎片/tool/NSArray+PKFragmentCellHeight.h"; sourceTree = "<group>"; };
+		60BCBF521C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PKFragmentCellHeight.m"; path = "碎片/tool/NSArray+PKFragmentCellHeight.m"; sourceTree = "<group>"; };
+		60BCBF551C4E97C3008DD3E6 /* PKFragmentTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKFragmentTableCell.h; path = "碎片/view/PKFragmentTableCell.h"; sourceTree = "<group>"; };
+		60BCBF561C4E97C3008DD3E6 /* PKFragmentTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKFragmentTableCell.m; path = "碎片/view/PKFragmentTableCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,8 +439,10 @@
 		60B33DA11C4D4C9500D2CEBC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				60B33D9E1C4D4C9100D2CEBC /* PKHomeFragmentTable.h */,
-				60B33D9F1C4D4C9100D2CEBC /* PKHomeFragmentTable.m */,
+				60B33D9E1C4D4C9100D2CEBC /* PKFragmentTable.h */,
+				60B33D9F1C4D4C9100D2CEBC /* PKFragmentTable.m */,
+				60BCBF551C4E97C3008DD3E6 /* PKFragmentTableCell.h */,
+				60BCBF561C4E97C3008DD3E6 /* PKFragmentTableCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -824,7 +835,6 @@
 			children = (
 				60BB1EE91C477672007D8F51 /* PKHomeViewController.h */,
 				60BB1EEA1C477672007D8F51 /* PKHomeViewController.m */,
-				60B33DA11C4D4C9500D2CEBC /* view */,
 			);
 			name = "首页";
 			sourceTree = "<group>";
@@ -847,8 +857,11 @@
 		60BCBF251C4E2356008DD3E6 /* 碎片 */ = {
 			isa = PBXGroup;
 			children = (
+				60BCBF501C4E96FE008DD3E6 /* tool */,
+				60BCBF3D1C4E8FE9008DD3E6 /* model */,
 				60BCBF261C4E238F008DD3E6 /* PKFragmentViewController.h */,
 				60BCBF271C4E238F008DD3E6 /* PKFragmentViewController.m */,
+				60B33DA11C4D4C9500D2CEBC /* view */,
 			);
 			name = "碎片";
 			sourceTree = "<group>";
@@ -896,6 +909,25 @@
 				60BCBF2F1C4E23CC008DD3E6 /* PKSettingViewController.m */,
 			);
 			name = "设置";
+			sourceTree = "<group>";
+		};
+		60BCBF3D1C4E8FE9008DD3E6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF441C4E8FE9008DD3E6 /* PKFragmentModel.h */,
+				60BCBF451C4E8FE9008DD3E6 /* PKFragmentModel.m */,
+			);
+			name = model;
+			path = piankemodel;
+			sourceTree = "<group>";
+		};
+		60BCBF501C4E96FE008DD3E6 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				60BCBF511C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.h */,
+				60BCBF521C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.m */,
+			);
+			name = tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1049,6 +1081,7 @@
 				60BB1E741C4733A9007D8F51 /* AFURLConnectionOperation.m in Sources */,
 				60BB1E861C4733A9007D8F51 /* NSArray+MASAdditions.m in Sources */,
 				601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */,
+				60BCBF531C4E9745008DD3E6 /* NSArray+PKFragmentCellHeight.m in Sources */,
 				60BB1E891C4733A9007D8F51 /* MJRefreshAutoFooter.m in Sources */,
 				60BB1E7A1C4733A9007D8F51 /* UIAlertView+AFNetworking.m in Sources */,
 				601E45B41C48CE9B008CBB9F /* PKLandingViewController.m in Sources */,
@@ -1057,7 +1090,9 @@
 				60BB1EF81C47A3C1007D8F51 /* PKLeftTableViewCell.m in Sources */,
 				60BB1E901C4733A9007D8F51 /* MJRefreshAutoStateFooter.m in Sources */,
 				60BB1EA61C4733A9007D8F51 /* NSData+ImageContentType.m in Sources */,
+				60BCBF571C4E97C3008DD3E6 /* PKFragmentTableCell.m in Sources */,
 				60BB1EEB1C477672007D8F51 /* PKHomeViewController.m in Sources */,
+				60BCBF4D1C4E8FE9008DD3E6 /* PKFragmentModel.m in Sources */,
 				60BB1EAD1C4733A9007D8F51 /* SDWebImagePrefetcher.m in Sources */,
 				60BB1EA21C4733A9007D8F51 /* RECommonFunctions.m in Sources */,
 				60BB1EE11C473A85007D8F51 /* AFDownloadRequestOperation.m in Sources */,
@@ -1079,7 +1114,7 @@
 				60BB1E821C4733A9007D8F51 /* MASConstraintMaker.m in Sources */,
 				60BB1ECE1C473685007D8F51 /* NSString+Helper.m in Sources */,
 				60BB1EB31C4733A9007D8F51 /* UIImageView+WebCache.m in Sources */,
-				60B33DA01C4D4C9100D2CEBC /* PKHomeFragmentTable.m in Sources */,
+				60B33DA01C4D4C9100D2CEBC /* PKFragmentTable.m in Sources */,
 				60BB1EDE1C473A2F007D8F51 /* UIBarButtonItem+Helper.m in Sources */,
 				60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */,
 				60BB1E7D1C4733A9007D8F51 /* UIProgressView+AFNetworking.m in Sources */,

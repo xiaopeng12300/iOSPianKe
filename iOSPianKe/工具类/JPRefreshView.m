@@ -68,7 +68,7 @@
 {
     self = [super init];
     if (self) {
-        self.backgroundColor = RGBAlpha(0, 0, 0, 0.2);
+        self.backgroundColor = [UIColor clearColor];
         [self addSubview:self.refreshview];
         [_refreshview addSubview:self.imageView];
 //        [self addSubview:self.label];

@@ -17,10 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
-//    NSString *string = @"290*890";
-//    NSLog(@"string:%@",string);
-//    NSArray *array = [string componentsSeparatedByString:@"*"];
-//    NSLog(@"array:%@",array);
+
     // Do any additional setup after loading the view.
 }
 

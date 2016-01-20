@@ -76,16 +76,31 @@
 
 #pragma mark 一串字符在固定宽度下，正常显示所需要的高度 method
 + (CGFloat)autoHeightWithString:(NSString *)string Width:(CGFloat)width Font:(UIFont *)font {
-    
+    NSMutableParagraphStyle * paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.lineSpacing = 10;//行间距
+    paragraph.paragraphSpacing = 50;//段落间隔
+    paragraph.firstLineHeadIndent = 50;//首行缩近
+    //绘制属性（字典）
+    NSDictionary * dictA = @{NSFontAttributeName:[UIFont systemFontOfSize:20],
+                             NSForegroundColorAttributeName:[UIColor greenColor],
+                             NSBackgroundColorAttributeName:[UIColor grayColor],
+                             NSParagraphStyleAttributeName:paragraph,
+                             //                             NSObliquenessAttributeName:@0.5 //斜体
+                             //                             NSStrokeColorAttributeName:[UIColor whiteColor],
+                             //                             NSStrokeWidthAttributeName:@2,//描边
+                             //                             NSKernAttributeName:@20,//字间距
+                             //                             NSStrikethroughStyleAttributeName:@2//删除线
+                             //                             NSUnderlineStyleAttributeName:@1,//下划线
+                             };
+
     //大小
     CGSize boundRectSize = CGSizeMake(width, MAXFLOAT);
-    //绘制属性（字典）
-    NSDictionary *fontDict = @{ NSFontAttributeName: font };
+    
     //调用方法,得到高度
     CGFloat newFloat = [string boundingRectWithSize:boundRectSize
                                             options: NSStringDrawingUsesLineFragmentOrigin
                         | NSStringDrawingUsesFontLeading
-                                         attributes:fontDict context:nil].size.height;
+                                         attributes:dictA context:nil].size.height;
     return newFloat;
 }
 
