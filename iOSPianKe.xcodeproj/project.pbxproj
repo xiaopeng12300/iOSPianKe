@@ -10,6 +10,7 @@
 		601E45B41C48CE9B008CBB9F /* PKLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B31C48CE9B008CBB9F /* PKLandingViewController.m */; };
 		601E45B81C48D0A8008CBB9F /* PKThirdLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */; };
 		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
+		605AE23B1C4F761C000AC12B /* PKGoodProductsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605AE23A1C4F761C000AC12B /* PKGoodProductsCell.m */; };
 		60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D981C4C810900D2CEBC /* PKLoginViewController.m */; };
 		60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9C1C4C829700D2CEBC /* PKLoginView.m */; };
 		60B33DA01C4D4C9100D2CEBC /* PKFragmentTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9F1C4D4C9100D2CEBC /* PKFragmentTable.m */; };
@@ -144,6 +145,8 @@
 		601E45B71C48D0A8008CBB9F /* PKThirdLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKThirdLandingView.m; path = "登陆/view/PKThirdLandingView.m"; sourceTree = "<group>"; };
 		601E45BC1C48EE18008CBB9F /* PKEmailLandingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKEmailLandingView.h; path = "登陆/view/PKEmailLandingView.h"; sourceTree = "<group>"; };
 		601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKEmailLandingView.m; path = "登陆/view/PKEmailLandingView.m"; sourceTree = "<group>"; };
+		605AE2391C4F761C000AC12B /* PKGoodProductsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKGoodProductsCell.h; path = "良品/cell/PKGoodProductsCell.h"; sourceTree = "<group>"; };
+		605AE23A1C4F761C000AC12B /* PKGoodProductsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKGoodProductsCell.m; path = "良品/cell/PKGoodProductsCell.m"; sourceTree = "<group>"; };
 		60B33D971C4C810900D2CEBC /* PKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginViewController.h; path = "注册/PKLoginViewController.h"; sourceTree = "<group>"; };
 		60B33D981C4C810900D2CEBC /* PKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginViewController.m; path = "注册/PKLoginViewController.m"; sourceTree = "<group>"; };
 		60B33D9B1C4C829700D2CEBC /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginView.h; path = "注册/view/PKLoginView.h"; sourceTree = "<group>"; };
@@ -415,6 +418,15 @@
 				601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		605AE2381C4F7604000AC12B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				605AE2391C4F761C000AC12B /* PKGoodProductsCell.h */,
+				605AE23A1C4F761C000AC12B /* PKGoodProductsCell.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		60B33D961C4C80EF00D2CEBC /* 注册 */ = {
@@ -898,6 +910,7 @@
 			children = (
 				60BCBF311C4E23F0008DD3E6 /* PKGoodProductsViewController.h */,
 				60BCBF321C4E23F0008DD3E6 /* PKGoodProductsViewController.m */,
+				605AE2381C4F7604000AC12B /* cell */,
 			);
 			name = "良品";
 			sourceTree = "<group>";
@@ -1116,6 +1129,7 @@
 				60BB1EB31C4733A9007D8F51 /* UIImageView+WebCache.m in Sources */,
 				60B33DA01C4D4C9100D2CEBC /* PKFragmentTable.m in Sources */,
 				60BB1EDE1C473A2F007D8F51 /* UIBarButtonItem+Helper.m in Sources */,
+				605AE23B1C4F761C000AC12B /* PKGoodProductsCell.m in Sources */,
 				60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */,
 				60BB1E7D1C4733A9007D8F51 /* UIProgressView+AFNetworking.m in Sources */,
 				60BB1EDB1C4739A4007D8F51 /* UINavigationItem+BackItem.m in Sources */,

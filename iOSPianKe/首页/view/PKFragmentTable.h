@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PKFragmentTable.h"//碎片数据
+
 typedef void(^loadNewDataBlock)();//加载新数据
 typedef void(^loadMoreDataBlock)();//加载更多数据
 
