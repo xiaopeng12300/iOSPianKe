@@ -11,6 +11,7 @@
 #import "MJRefresh.h"
 #import "MJChiBaoZiHeader.h"
 #import "MJChiBaoZiFooter2.h"
+#import "PKGoodProductsInfoController.h"
 @interface PKGoodProductsViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic)                   UITableView *GoodProductTable;
@@ -77,6 +78,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    PKGoodProductsInfoController *info = [[PKGoodProductsInfoController alloc]init];
+    
+    info.contentID = [self.goodProductArray[indexPath.row] valueForKey:@"contentid"];
+    
+    [self.navigationController pushViewController:info animated:YES];
 }
 
 - (void)reloadGoodPraductsData:(NSInteger )start{
