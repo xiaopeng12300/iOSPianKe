@@ -12,6 +12,7 @@
 		601E45BE1C48EE18008CBB9F /* PKEmailLandingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E45BD1C48EE18008CBB9F /* PKEmailLandingView.m */; };
 		605AE23B1C4F761C000AC12B /* PKGoodProductsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605AE23A1C4F761C000AC12B /* PKGoodProductsCell.m */; };
 		605AE23F1C507051000AC12B /* PKGoodProductsInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605AE23E1C507051000AC12B /* PKGoodProductsInfoController.m */; };
+		6092E0621C51D57200944B54 /* PKFragmentSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6092E0611C51D57200944B54 /* PKFragmentSecondViewController.m */; };
 		60B33D991C4C810900D2CEBC /* PKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D981C4C810900D2CEBC /* PKLoginViewController.m */; };
 		60B33D9D1C4C829700D2CEBC /* PKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9C1C4C829700D2CEBC /* PKLoginView.m */; };
 		60B33DA01C4D4C9100D2CEBC /* PKFragmentTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B33D9F1C4D4C9100D2CEBC /* PKFragmentTable.m */; };
@@ -150,6 +151,8 @@
 		605AE23A1C4F761C000AC12B /* PKGoodProductsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKGoodProductsCell.m; path = "良品/cell/PKGoodProductsCell.m"; sourceTree = "<group>"; };
 		605AE23D1C507051000AC12B /* PKGoodProductsInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKGoodProductsInfoController.h; path = "良品/PKGoodProductsInfoController.h"; sourceTree = "<group>"; };
 		605AE23E1C507051000AC12B /* PKGoodProductsInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKGoodProductsInfoController.m; path = "良品/PKGoodProductsInfoController.m"; sourceTree = "<group>"; };
+		6092E0601C51D57200944B54 /* PKFragmentSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKFragmentSecondViewController.h; path = "碎片/PKFragmentSecondViewController.h"; sourceTree = "<group>"; };
+		6092E0611C51D57200944B54 /* PKFragmentSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKFragmentSecondViewController.m; path = "碎片/PKFragmentSecondViewController.m"; sourceTree = "<group>"; };
 		60B33D971C4C810900D2CEBC /* PKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginViewController.h; path = "注册/PKLoginViewController.h"; sourceTree = "<group>"; };
 		60B33D981C4C810900D2CEBC /* PKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKLoginViewController.m; path = "注册/PKLoginViewController.m"; sourceTree = "<group>"; };
 		60B33D9B1C4C829700D2CEBC /* PKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKLoginView.h; path = "注册/view/PKLoginView.h"; sourceTree = "<group>"; };
@@ -439,6 +442,15 @@
 				605AE23E1C507051000AC12B /* PKGoodProductsInfoController.m */,
 			);
 			name = "良品详情";
+			sourceTree = "<group>";
+		};
+		6092E05F1C51D3D300944B54 /* 碎片不分层 */ = {
+			isa = PBXGroup;
+			children = (
+				6092E0601C51D57200944B54 /* PKFragmentSecondViewController.h */,
+				6092E0611C51D57200944B54 /* PKFragmentSecondViewController.m */,
+			);
+			name = "碎片不分层";
 			sourceTree = "<group>";
 		};
 		60B33D961C4C80EF00D2CEBC /* 注册 */ = {
@@ -881,6 +893,7 @@
 		60BCBF251C4E2356008DD3E6 /* 碎片 */ = {
 			isa = PBXGroup;
 			children = (
+				6092E05F1C51D3D300944B54 /* 碎片不分层 */,
 				60BCBF501C4E96FE008DD3E6 /* tool */,
 				60BCBF3D1C4E8FE9008DD3E6 /* model */,
 				60BCBF261C4E238F008DD3E6 /* PKFragmentViewController.h */,
@@ -1145,6 +1158,7 @@
 				60BB1EDE1C473A2F007D8F51 /* UIBarButtonItem+Helper.m in Sources */,
 				605AE23B1C4F761C000AC12B /* PKGoodProductsCell.m in Sources */,
 				60BB1D991C473118007D8F51 /* AppDelegate.m in Sources */,
+				6092E0621C51D57200944B54 /* PKFragmentSecondViewController.m in Sources */,
 				60BB1E7D1C4733A9007D8F51 /* UIProgressView+AFNetworking.m in Sources */,
 				60BB1EDB1C4739A4007D8F51 /* UINavigationItem+BackItem.m in Sources */,
 				60BB1EA81C4733A9007D8F51 /* SDWebImageCompat.m in Sources */,

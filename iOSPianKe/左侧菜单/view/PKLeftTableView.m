@@ -24,8 +24,8 @@
         self.delegate = self;
         self.dataSource = self;
         self.bounces = NO;
-        self.imageArray = @[@"首页",@"电台",@"阅读",@"社区",@"碎片",@"良品",@"设置"];
-        self.titleArray = @[@"首页",@"电台",@"阅读",@"社区",@"碎片",@"良品",@"设置"];
+        self.imageArray = @[@"首页",@"电台",@"阅读",@"社区",@"碎片",@"碎片不分层",@"良品",@"设置"];
+        self.titleArray = @[@"首页",@"电台",@"阅读",@"社区",@"碎片",@"碎片",@"良品",@"设置"];
         [self registerClass:[PKLeftTableViewCell class] forCellReuseIdentifier:@"cell"];
         self.separatorStyle = NO;
         self.backgroundColor = RGB(51, 51, 51);
@@ -34,7 +34,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return 8;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

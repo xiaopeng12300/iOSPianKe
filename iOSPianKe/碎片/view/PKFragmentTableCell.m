@@ -75,6 +75,34 @@
 }
 
 
+- (void)setDataDic:(NSDictionary *)dataDic{
+    _dataDic = dataDic;
+    [_iconImage downloadImage:[dataDic[@"userinfo"] valueForKey:@"icon"]];
+    _userName.text = [dataDic[@"userinfo"] valueForKey:@"uname"];
+    _timeLabel.text = dataDic[@"addtimeF"];
+    _likeLabel.text = [NSString stringWithFormat:@"%@",[dataDic[@"counterList"] valueForKey:@"like"]];
+    _writeLabel.text = [NSString stringWithFormat:@"%@",[dataDic[@"counterList"] valueForKey:@"comment"]];
+    //加载网络图片方法（UIImageView+SDWedImage中）
+    [_contentImage downloadImage:dataDic[@"coverimg"]];
+    //label调用属性字符串
+    _contentLabel.attributedText = [self makeText:dataDic[@"content"]];
+    
+    CGFloat imageHeight = [_heightDic[@"imageHeight"] floatValue];
+    CGFloat textHeight = [_heightDic[@"textHeight"] floatValue];
+    NSLog(@"----------%lf---------%lf",imageHeight,textHeight);
+    if (imageHeight == 0) {
+        
+        _contentLabel.frame = CGRectMake(20, 70, VIEW_WIDTH-40, textHeight);
+        _contentImage.frame = CGRectMake(20, 70, VIEW_WIDTH-40, 0);
+        
+    }else{
+        _contentImage.frame = CGRectMake(20, 70, VIEW_WIDTH-40, imageHeight);
+        _contentLabel.frame = CGRectMake(20, imageHeight+80, VIEW_WIDTH-40, textHeight);
+        
+    }
+}
+
+
 - (void)addAutoLayout{
     WS(weakSelf);
 

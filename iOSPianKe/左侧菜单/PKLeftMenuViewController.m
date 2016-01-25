@@ -19,6 +19,7 @@
 #import "PKRadioViewController.h"//电台
 #import "PKFragmentViewController.h"//碎片
 #import "PKHomeViewController.h"//首页
+#import "PKFragmentSecondViewController.h"//碎片不分层
 
 @interface PKLeftMenuViewController ()<PKLeftTableViewSelectRow>
 
@@ -139,6 +140,15 @@
             break;
         case 5:
         {
+            PKFragmentSecondViewController *FragmentController = [[PKFragmentSecondViewController alloc]init];
+            FragmentController.title = @"碎片不分层";
+            ZJPNavigationController *FragmentNav = [[ZJPNavigationController alloc]initWithRootViewController:FragmentController];
+            [self.sideMenuViewController setContentViewController:FragmentNav animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+            break;
+        case 6:
+        {
             PKGoodProductsViewController *GoodProductsController = [[PKGoodProductsViewController alloc]init];
             GoodProductsController.title = @"良品";
             ZJPNavigationController *GoodProductsNav = [[ZJPNavigationController alloc]initWithRootViewController:GoodProductsController];
@@ -146,7 +156,7 @@
             [self.sideMenuViewController hideMenuViewController];
         }
             break;
-        case 6:
+        case 7:
         {
             PKSettingViewController *SettingeController = [[PKSettingViewController alloc]init];
             SettingeController.title = @"设置";
